@@ -232,8 +232,7 @@ public abstract class AbstractMultiValuedMap<K, V> implements MultiValuedMap<K, 
      */
     @Override
     public Collection<V> values() {
-        final Collection<V> vs = valuesView;
-        return vs != null ? vs : (valuesView = new Values());
+        return (valuesView != null) ? valuesView : (valuesView = new Values());
     }
 
     @Override

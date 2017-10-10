@@ -1270,38 +1270,6 @@ public abstract class AbstractCollectionTest<E> extends AbstractObjectTest {
         }
     }
 
-    @Override
-    public void testSerializeDeserializeThenCompare() throws Exception {
-        Object obj = makeObject();
-        if (obj instanceof Serializable && isTestSerialization()) {
-            final ByteArrayOutputStream buffer = new ByteArrayOutputStream();
-            final ObjectOutputStream out = new ObjectOutputStream(buffer);
-            out.writeObject(obj);
-            out.close();
-
-            final ObjectInputStream in = new ObjectInputStream(new ByteArrayInputStream(buffer.toByteArray()));
-            final Object dest = in.readObject();
-            in.close();
-            if (isEqualsCheckable()) {
-                assertEquals("obj != deserialize(serialize(obj)) - EMPTY Collection", obj, dest);
-            }
-        }
-        obj = makeFullCollection();
-        if (obj instanceof Serializable && isTestSerialization()) {
-            final ByteArrayOutputStream buffer = new ByteArrayOutputStream();
-            final ObjectOutputStream out = new ObjectOutputStream(buffer);
-            out.writeObject(obj);
-            out.close();
-
-            final ObjectInputStream in = new ObjectInputStream(new ByteArrayInputStream(buffer.toByteArray()));
-            final Object dest = in.readObject();
-            in.close();
-            if (isEqualsCheckable()) {
-                assertEquals("obj != deserialize(serialize(obj)) - FULL Collection", obj, dest);
-            }
-        }
-    }
-
     public Collection<E> getCollection() {
         return collection;
     }

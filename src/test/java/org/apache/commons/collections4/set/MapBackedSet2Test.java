@@ -80,12 +80,5 @@ public class MapBackedSet2Test<E> extends AbstractSetTest<E> {
         }
     }
 
-    @Override
-    public void testCanonicalEmptyCollectionExists() {
-    }
-
-    @Override
-    public void testCanonicalFullCollectionExists() {
-    }
 
 }

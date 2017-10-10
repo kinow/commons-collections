@@ -46,7 +46,6 @@ public class DefaultedMapTest<K, V> extends AbstractIterableMapTest<K, V> {
     }
 
     //-----------------------------------------------------------------------
-    @Override
     @SuppressWarnings("unchecked")
     public void testMapGet() {
         final Map<K, V> map = new DefaultedMap<>((V) "NULL");

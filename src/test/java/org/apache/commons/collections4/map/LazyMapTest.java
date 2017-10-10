@@ -47,7 +47,6 @@ public class LazyMapTest<K, V> extends AbstractIterableMapTest<K, V> {
     }
 
     //-----------------------------------------------------------------------
-    @Override
     public void testMapGet() {
         //TODO eliminate need for this via superclass - see svn history.
     }

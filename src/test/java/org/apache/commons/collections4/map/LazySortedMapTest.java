@@ -56,7 +56,6 @@ public class LazySortedMapTest<K, V> extends AbstractSortedMapTest<K, V> {
 
     // from LazyMapTest
     //-----------------------------------------------------------------------
-    @Override
     public void testMapGet() {
         //TODO eliminate need for this via superclass - see svn history.
     }
